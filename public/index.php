@@ -14,8 +14,11 @@ use Doctrine\DBAL\DriverManager;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\ORMSetup;
 use Symfony\Component\Dotenv\Dotenv;
+use Symfony\Component\HttpFoundation\Request;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
+use App\Controller\ServiceController;
+use App\Service\AppService;
 
 if (
     php_sapi_name() !== 'cli' && // Environnement d'exécution != console
